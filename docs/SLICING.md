@@ -20,6 +20,9 @@ PLR_ENABLE
 PLR_SAVE_MESH
 ;;;;; PLR_RESUME - PRINT GCODE STARTS ;;;;;`
 
+> `END_PRINT
+PLR_RESET_PRINT_DATA` 
+
 Variables may differ depending on the slicer used.
 
 ### Timelapse Support
