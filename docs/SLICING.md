@@ -13,7 +13,12 @@ Existing AD5M profiles can be used a baseline. But make sure to configure at lea
 * No further command from the old configuration should be present. Please, take care that this will make your sliced GCODE no longer suitable for the stock firmware.
 
 > **Example:**  
-> `START_PRINT BED_TEMP={first_layer_bed_temperature[0]} EXTRUDER_TEMP={first_layer_temperature[0]}`
+> `;;;;; PLR_RESUME - INITIAL PRINTER SETUP STARTS ;;;;;
+PLR_DISABLE
+START_PRINT BED_TEMP=[bed_temperature_initial_layer_single] EXTRUDER_TEMP=[nozzle_temperature_initial_layer]
+PLR_ENABLE
+PLR_SAVE_MESH
+;;;;; PLR_RESUME - PRINT GCODE STARTS ;;;;;`
 
 Variables may differ depending on the slicer used.
 
