@@ -21,7 +21,13 @@ PLR_SAVE_MESH
 ;;;;; PLR_RESUME - PRINT GCODE STARTS ;;;;;`
 
 > `END_PRINT
-PLR_RESET_PRINT_DATA` 
+PLR_RESET_PRINT_DATA`
+
+> `;BEFORE_LAYER_CHANGE
+;[layer_z]
+;LAYER_CHANGE
+;Z:[layer_z]
+PLR_SAVE_PRINT_STATE_WITH_LAYER LAYER={layer_num} LAYER_HEIGHT={layer_z}`
 
 Variables may differ depending on the slicer used.
 
